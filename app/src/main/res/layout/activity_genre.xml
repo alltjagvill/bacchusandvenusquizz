@@ -1,66 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#b1f1ea">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/miscbutton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="53dp"
+        android:layout_weight="1"
+        android:text="@string/misc"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/memesbutton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="53dp"
+        android:layout_toRightOf="@id/miscbutton"
+        android:layout_weight="1"
+        android:text="@string/memes"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/sexbutton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/alcoholbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/alcoholbutton"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="1"
+        android:text="@string/sex"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/alcoholbutton"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="203dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="211dp"
+        android:layout_weight="1"
+        android:text="@string/alcohol"
+        android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/alcohol"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="@string/alcohol"
-            android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/sex"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="@string/sex"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="310dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/category3"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="@string/category3"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/misc"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="@string/misc"
-            android:textSize="30sp" />
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/title"
@@ -74,4 +72,50 @@
         android:layout_marginRight="96dp"
         android:text="@string/categories"
         android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/grailimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/alcoholbutton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="-211dp"
+        app:srcCompat="@drawable/grail" />
+
+    <ImageView
+        android:id="@+id/seximage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sexbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/sex" />
+
+    <ImageView
+        android:id="@+id/truckimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/miscbutton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginBottom="-4dp"
+        app:srcCompat="@drawable/truck" />
+
+    <ImageView
+        android:id="@+id/memesimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/memesbutton"
+        android:layout_alignEnd="@+id/title"
+        android:layout_marginEnd="-20dp"
+        android:layout_marginBottom="-4dp"
+        app:srcCompat="@drawable/memes" />
+
 </RelativeLayout>

@@ -31,8 +31,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/venus"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
         android:onClick="startGame"
         android:text="@string/startgame" />
+
+    <EditText
+        android:id="@+id/teamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/venus"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="" />
 
 
 </RelativeLayout>
