@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Bacchus &amp; Venus Quizz</string>
+    <string name="title">Hell Bacchus och Venus!</string>
+
+    <!-- First screen -->
+    <string name="startgame">Start a quizz!</string>
+
+    <!--Genre/Categories -->
+
+    <string name="categories">Categories</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="sex">Sex</string>
+    <string name="category3">Cat3</string>
+    <string name="misc">Misc</string>
+    
+
+
+</resources>
