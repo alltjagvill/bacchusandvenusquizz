@@ -17,7 +17,8 @@
         android:layout_marginBottom="53dp"
         android:layout_weight="1"
         android:text="@string/misc"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:onClick="startMisc"/>
 
     <Button
         android:id="@+id/memesbutton"
@@ -31,7 +32,8 @@
         android:layout_toRightOf="@id/miscbutton"
         android:layout_weight="1"
         android:text="@string/memes"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:onClick="startMemes"/>
 
     <Button
         android:id="@+id/sexbutton"
@@ -44,7 +46,8 @@
         android:layout_marginEnd="24dp"
         android:layout_weight="1"
         android:text="@string/sex"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:onClick="startSex"/>
 
     <Button
         android:id="@+id/alcoholbutton"
@@ -56,7 +59,8 @@
         android:layout_marginTop="211dp"
         android:layout_weight="1"
         android:text="@string/alcohol"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:onClick="startAlcohol"/>
 
 
 
