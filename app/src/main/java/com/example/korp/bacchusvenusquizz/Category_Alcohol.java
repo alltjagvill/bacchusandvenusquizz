@@ -12,6 +12,6 @@ public class Category_Alcohol extends AppCompatActivity {
 
         ListQuizzes list = new ListQuizzes();
 
-        list.list("alcohol");
+        list.list("alcohol", this);
     }
 }

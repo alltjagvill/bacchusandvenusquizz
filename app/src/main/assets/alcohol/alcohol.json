@@ -1,0 +1,24 @@
+{
+  "alcohol": [
+    {"quiz_name": "Best quiz!"
+    },
+    {"q1": "namn?",
+      "q1_a_r" : "peter",
+      "q1_a_w1" : "nils",
+      "q1_a_w2" : "susan",
+      "q1_a_w3" : "lois"},
+    {"q2": "namn?",
+      "q2_a_r" : "peter",
+      "q2_a_w1" : "nils",
+      "q2_a_w2" : "susan",
+      "q2_a_w3" : "lois"}
+    {"q3": "namn?",
+      "q3_a_r" : "peter",
+      "q3_a_w1" : "nils",
+      "q3_a_w2" : "susan",
+      "q3_a_w3" : "lois"}
+
+  ]
+      
+  ]
+}

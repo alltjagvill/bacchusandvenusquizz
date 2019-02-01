@@ -1,0 +1,16 @@
+{
+  "misc": [
+    {"quiz_name": "Det braiga quizet",
+      "q": "namn?",
+      "a_r" : "peter",
+      "a_w1" : "nils",
+      "a_w2" : "susan",
+      "a_w3" : "lois"},
+    {"q": "namn?",
+      "a_r" : "peter",
+      "a_w1" : "nils",
+      "a_w2" : "susan",
+      "a_w3" : "lois"}
+      
+  ]
+}
