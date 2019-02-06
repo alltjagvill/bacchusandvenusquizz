@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Bacchus &amp; Venus Quizz</string>
     <string name="title">Hell Bacchus och Venus!</string>
+    <string name="chnageMe">Change me</string>
+    <string name="hyphen">-</string>
 
     <!-- First screen -->
     <string name="teamNameHint">Please enter your teams name...</string>

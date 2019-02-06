@@ -1,15 +1,24 @@
 {
-  "memes": [
+
+  "title" : "best quiz",
+  "category" : "alcohol",
+  "author" : "Niclas",
+  "questions": [
 
     {
-      "quiz_name": "Best quiz!",
-      "q1": "namn?",
-      "q1_a_r" : "peter",
-      "q1_a_w1" : "nils",
-      "q1_a_w2" : "susan",
-      "q1_a_w3" : "lois"}
-
-
+      "question": "namn?",
+      "a_r" : "peter",
+      "a_w1" : "nils",
+      "a_w2" : "susan",
+      "a_w3" : "lois"
+    },
+    {
+      "question": "namn2?",
+      "a_r" : "peter",
+      "a_w1" : "nils",
+      "a_w2" : "susan",
+      "a_w3" : "lois"
+    }
   ]
 
 }

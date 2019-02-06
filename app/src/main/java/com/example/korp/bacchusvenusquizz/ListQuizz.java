@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class ListQuizz extends AppCompatActivity {
 
@@ -21,15 +22,16 @@ public class ListQuizz extends AppCompatActivity {
         setContentView(R.layout.activity_list_quizz);
 
         String category = getIntent().getStringExtra("CATEGORY");
-        Log.i("CATEGORY:", category);
-
         String categoryName = category + "List";
 
         final AssetManager assetManager = getAssets();
 
         try {
             String[] list = assetManager.list(category);
-            String[] categoryNameList = assetManager.list(categoryName);
+
+            ArrayList<Quiz> categoryNameList = new ArrayList<>();
+
+
             String filename;
             Gson gson = new Gson();
 
@@ -38,35 +40,37 @@ public class ListQuizz extends AppCompatActivity {
 
             }
             else {
-                for (int i = 0; i < list.length; i++) {
-                    filename = list[i];
-                    Log.i("filename", list[i]);
-                }
-                for ( String d : list) {
 
-                    String json = loadJSONFromAsset(category, d);
+                    for ( String d : list) {
 
-                    Log.i("JSON", json);
+                        String json = loadJSONFromAsset(category, d);
 
-                     Quiz obj = gson.fromJson(json, Quiz.class);
+                        Log.i("JSON", json);
+
+                        Quiz obj = gson.fromJson(json, Quiz.class);
+                        categoryNameList.add(obj);
 
 
-                    //String json = gson.toJson(quizes);
-                }
+
+                    }
+
+
+
+
             }
 
 
 
             //Put the array into the ListView
             ListView quizzessView = findViewById(R.id.quizz_list);
-            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list);
+            ArrayAdapter adapter = new QuizAdapter(this, categoryNameList);
             quizzessView.setAdapter(adapter);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    //Reads the json-file and convert it to a string
     public String loadJSONFromAsset(String folder, String file) {
         String path = folder + "/" + file;
         String json = null;
