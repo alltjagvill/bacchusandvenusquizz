@@ -1,6 +1,9 @@
 package com.example.korp.bacchusvenusquizz;
 
-public class Quiz {
+
+import java.io.Serializable;
+
+public class Quiz implements Serializable {
 
  String title;
  String category;

@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".genre" />
-        <activity android:name=".Category_Sex" />
-        <activity android:name=".Category_Memes" />
-        <activity android:name=".Category_Alcohol" />
-        <activity android:name=".Category_Misc" />
         <activity android:name=".ListQuizz" />
         <activity android:name=".QuestionActivity"></activity>
     </application>

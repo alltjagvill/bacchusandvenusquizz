@@ -1,9 +1,12 @@
 package com.example.korp.bacchusvenusquizz;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -11,9 +14,11 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ListQuizz extends AppCompatActivity {
+
+public class ListQuizz extends AppCompatActivity implements Serializable {
 
 
     @Override
@@ -29,14 +34,14 @@ public class ListQuizz extends AppCompatActivity {
         try {
             String[] list = assetManager.list(category);
 
-            ArrayList<Quiz> categoryNameList = new ArrayList<>();
+            final ArrayList<Quiz> categoryNameList = new ArrayList<>();
 
 
             String filename;
             Gson gson = new Gson();
 
             if (list == null) {
-                Log.i("NOASSETS", "Do not get assets");
+
 
             }
             else {
@@ -45,26 +50,49 @@ public class ListQuizz extends AppCompatActivity {
 
                         String json = loadJSONFromAsset(category, d);
 
-                        Log.i("JSON", json);
 
                         Quiz obj = gson.fromJson(json, Quiz.class);
                         categoryNameList.add(obj);
-
-
-
-                    }
-
-
-
+                        }
 
             }
 
 
 
             //Put the array into the ListView
-            ListView quizzessView = findViewById(R.id.quizz_list);
+            final ListView quizzessView = findViewById(R.id.quizz_list);
             ArrayAdapter adapter = new QuizAdapter(this, categoryNameList);
             quizzessView.setAdapter(adapter);
+
+
+
+
+            //Create click listener
+            quizzessView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Bundle extras = new Bundle();
+
+                    Quiz selectedQuiz = (Quiz) quizzessView.getItemAtPosition(position);
+                    Intent sendQuiz = new Intent(getApplicationContext(), QuestionActivity.class);
+                    sendQuiz.putExtra("QUIZOBJECT", selectedQuiz);
+
+                    /*extras.putString("TITLE", selectedQuiz.title);
+                    String title = selectedQuiz.title;
+                    sendQuiz.putExtra("TITLE", selectedQuiz.title);
+                    sendQuiz.putExtra("AUTHOR", selectedQuiz.author);
+                    sendQuiz.putExtra("CATEGORY", selectedQuiz.category);
+                    sendQuiz.putExtra("QUESTIONS", selectedQuiz.questions);*/
+
+                    startActivity(sendQuiz);
+
+
+                }
+            });
+
+
+
 
         } catch (IOException e) {
             e.printStackTrace();

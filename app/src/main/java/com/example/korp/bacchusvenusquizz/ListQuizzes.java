@@ -17,7 +17,7 @@ public class ListQuizzes  {
 
         //Creating folder variable
         String category1 = "\"" + category + "\"";
-        Log.i("folder", category1);
+
 
         //Creates array with file names
         final AssetManager assetManager = activity.getAssets();
