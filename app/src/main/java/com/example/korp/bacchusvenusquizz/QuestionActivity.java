@@ -21,6 +21,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         for (int i = 0; i < quiz.questions.length; i++) {
 
+
             Log.d("MYCLASS", quiz.questions[i].question);
             Log.d("MYCLASS", quiz.questions[i].a_r);
             Log.d("MYCLASS", quiz.questions[i].a_w1);
