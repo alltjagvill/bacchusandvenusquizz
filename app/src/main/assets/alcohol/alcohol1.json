@@ -3,6 +3,7 @@
   "title" : "Another best quiz!",
   "category" : "alcohol",
   "author" : "Niclas",
+  "timePerQuestion" : "60",
   "questions": [
 
     {

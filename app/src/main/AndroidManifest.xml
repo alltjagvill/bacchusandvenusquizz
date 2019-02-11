@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".genre" />
         <activity android:name=".ListQuizzActivity" />
-        <activity android:name=".QuestionActivity"></activity>
+        <activity android:name=".QuestionActivity" />
+        <activity android:name=".ScoreActivity"></activity>
     </application>
 
 </manifest>

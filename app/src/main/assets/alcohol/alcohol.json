@@ -3,21 +3,22 @@
   "title" : "best quiz EVER!",
   "category" : "alcohol",
   "author" : "Niclas Binninge",
+  "timePerQuestion" : "10",
   "questions": [
 
     {
-      "question": "namn?",
-      "a_r" : "peter",
-      "a_w1" : "nils",
-      "a_w2" : "susan",
-      "a_w3" : "lois"
+      "question": "What is the strongest beer in the world?",
+      "a_r" : "Nuclear penguin",
+      "a_w1" : "Nilsons stout",
+      "a_w2" : "Golden gate",
+      "a_w3" : "Suprise buttsex"
     },
     {
-      "question": "namn2?",
-      "a_r" : "peter",
-      "a_w1" : "nils",
-      "a_w2" : "susan",
-      "a_w3" : "lois"
+      "question": "How strong is the strongest beer in the world?",
+      "a_r" : "50%",
+      "a_w1" : "12%",
+      "a_w2" : "27%",
+      "a_w3" : "41%"
     }
   ]
 

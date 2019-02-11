@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class ListQuizzActivity extends AppCompatActivity{
+public class ListQuizzActivity extends AppCompatActivity {
 
 
     @Override
