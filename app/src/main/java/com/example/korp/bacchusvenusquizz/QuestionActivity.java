@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,8 +27,13 @@ public class QuestionActivity extends AppCompatActivity {
     int quizLength;
 
 
-    ArrayList<String> yourAnswers = new ArrayList<String>();
     ArrayList<String> rightAnswers = new ArrayList<String>();
+    //ArrayList1 rightAnswers1 = new ArrayList1(rightAnswers);
+    ArrayList<String> yourAnswers = new ArrayList<String>();
+    //ArrayList1 yourAnswers1 = new ArrayList1(yourAnswers);
+
+
+
 
 
     @Override
@@ -35,9 +41,13 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question__activity);
 
-        Quiz quiz = (Quiz) getIntent().getSerializableExtra("QUIZOBJECT");
+        String noAnswer = getString(R.string.noAnwser);
 
+
+        Quiz quiz = (Quiz) getIntent().getSerializableExtra("QUIZOBJECT");
         quizLength = quiz.questions.length;
+
+
 
         //Countdowntimer stuff
         timePerQuestion = quiz.timePerQuestion * 1000;
@@ -54,18 +64,18 @@ public class QuestionActivity extends AppCompatActivity {
         for (int i = 0; i < quizLength; i++) {
             rightAnswers.add(quiz.questions[i].a_r);
             Log.d("ANSWERS1", rightAnswers.get(i));
-            yourAnswers.add(Integer.toString(R.string.noAnwser));
+
+            yourAnswers.add(noAnswer);
             Log.d("ANSWERS1", yourAnswers.get(i));
+
+          // test[i] = noAnswer;
+
 
 
         }
 
 
-
-        //Populate yourAnswer with default "No Answer"
-
-
-
+        //Set onclick listener on the buttons
         Button b1 = findViewById(R.id.answer1);
         Button b2 = findViewById(R.id.answer2);
         Button b3 = findViewById(R.id.answer3);
@@ -95,21 +105,7 @@ public class QuestionActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-        startQuestion(quiz, position, quizLength, timePerQuestion);
-
-
-
-
-        // mProgressBar.setProgress(timer);
-        //Log.d("TIMER", Integer.toString(timer));
-
-
-
-
-
+        startQuestion(quiz, timePerQuestion);
     }
 
 
@@ -124,7 +120,7 @@ public class QuestionActivity extends AppCompatActivity {
     //Methods
 
     //Start a timer and goes to next question if question not answered
-    public void startTimer(final Quiz quiz1, final int quizLength, final int position, final int timePerQuestion) {
+    public void startTimer(final Quiz quiz1, final int timePerQuestion) {
 
 
         new CountDownTimer(timePerQuestion, 10) {
@@ -150,11 +146,12 @@ public class QuestionActivity extends AppCompatActivity {
 
                     mProgressBar.setRotation(0);
                     timer = 0;
+                    position = position + 1;
 
 
 
 
-                    startQuestion(quiz1, position, quizLength, timePerQuestion);
+                    startQuestion(quiz1, timePerQuestion);
 
 
 
@@ -168,8 +165,9 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     //Starts the question in line and starts the timer
-    public void startQuestion(Quiz quiz, int position, int timePerQuestion) {
+    public void startQuestion(Quiz quiz, int timePerQuestion) {
 
+        Log.d("POSITON", Integer.toString(position));
         if (position >= quizLength) {
             Log.d("Finnished", "Finnished");
 
@@ -183,9 +181,24 @@ public class QuestionActivity extends AppCompatActivity {
 
             for (String answers : yourAnswers) {
                 Log.d("ANSWERSY", answers);
+
             }
 
+            /*String[] rAnswers = rightAnswers.toArray(new String[rightAnswers.size()]);
+            String[] yAnswers = yourAnswers.toArray(new String[yourAnswers.size()]);*/
             Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
+
+            Bundle extras = new Bundle();
+
+            //intent.putExtra("RIGHTANSWERS", rightAnswers);
+            //extras.putStringArray("TEST", rAnswers);
+            intent.putStringArrayListExtra("RIGHTANSWERS", rightAnswers);
+            intent.putStringArrayListExtra("YOURANSWERS", yourAnswers);
+
+
+
+            //extras.putSerializable("RIGHTANSWER", rightAnswers);
+          //  extras.putSerializable("YOURANSWERS", yourAnswers);
 
             startActivity(intent);
         }
@@ -259,8 +272,8 @@ public class QuestionActivity extends AppCompatActivity {
             Log.d("QUIZOBJECT", quiz.questions[position].a_w2);
             Log.d("QUIZOBJECT", quiz.questions[position].a_w3);
 */
-            position = position + 1;
-            startTimer(quiz, quizLength, position, timePerQuestion);
+
+            startTimer(quiz, timePerQuestion);
         }
     }
 
@@ -288,6 +301,7 @@ public class QuestionActivity extends AppCompatActivity {
 
 
             String answer = answer2.getText().toString();
+            //yourAnswers.set(position, answer);
             yourAnswers.set(position, answer);
             answer2.setBackgroundColor(Color.RED);
         }
