@@ -28,46 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="636366fc-15c7-4565-b38f-59da78cd328e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/AnswerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/RightAnswerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/YourAnswerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/venus1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/venus_opa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/answerlisting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/alcohol/alcohol.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/alcohol/alcohol.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/alcohol/alcohol1.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/alcohol/alcohol1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/memes/memes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/memes/memes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/misc/misc.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/misc/misc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/sex/sex.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/sex/sex.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ArrayList1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ArrayList1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizzActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizzes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuizAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuizAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button_corner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button_corner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_quizz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_quizz.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/quizlisting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/quizlisting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,7 +57,7 @@
       <file leaf-file-name="QuestionActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
+            <state relative-caret-position="1950">
               <caret line="149" column="54" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -105,7 +69,7 @@
       <file leaf-file-name="ListQuizActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="690">
               <caret line="60" column="70" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,16 +90,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScoreActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="110" column="62" selection-start-line="110" selection-start-column="62" selection-end-line="110" selection-end-column="62" />
+            <state relative-caret-position="285">
+              <caret line="55" column="69" selection-start-line="53" selection-start-column="4" selection-end-line="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1935#1963#0" expanded="true" />
-                <element signature="e#2000#2031#0" expanded="true" />
-                <element signature="e#2067#2097#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,7 +105,7 @@
       <file leaf-file-name="RightAnswerAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/RightAnswerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="165">
               <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -156,7 +117,7 @@
       <file leaf-file-name="quizlisting.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quizlisting.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
+            <state relative-caret-position="690">
               <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
@@ -168,7 +129,7 @@
       <file leaf-file-name="answerlisting.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/answerlisting.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="255">
               <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
             </state>
           </provider>
@@ -180,7 +141,7 @@
       <file leaf-file-name="activity_score.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="990">
               <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
             </state>
           </provider>
@@ -189,15 +150,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnswerAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnswerAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/AnswerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="270">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,7 +165,7 @@
       <file leaf-file-name="QuizAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuizAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="195">
               <caret line="22" column="81" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -2549,8 +2508,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Answer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuizAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/AnswerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java" />
       </list>
     </option>
   </component>
@@ -2778,24 +2737,22 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50213677" side_tool="true" weight="0.38546255" />
-      <window_info anchor="right" id="Preview" order="3" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32929516" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32885906" />
-      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49786323" visible="true" weight="0.3842282" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49786323" weight="0.38333333" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19423369" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49839744" weight="0.32718122" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -2803,11 +2760,13 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Preview" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49924126" weight="0.32819384" />
@@ -2826,6 +2785,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015175" side_tool="true" weight="0.32885906" />
       <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49848256" weight="0.42400882" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -2838,7 +2798,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -2934,23 +2893,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizzes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizzes.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3047,9 +2994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3057,9 +3001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3072,7 +3013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
+        <state relative-caret-position="1950">
           <caret line="149" column="54" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3089,7 +3030,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quizlisting.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
+        <state relative-caret-position="690">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
@@ -3120,7 +3061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuizAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="195">
           <caret line="22" column="81" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3132,7 +3073,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ListQuizActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="690">
           <caret line="60" column="70" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3152,7 +3093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="990">
           <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
         </state>
       </provider>
@@ -3162,7 +3103,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/RightAnswerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="165">
           <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -3170,22 +3111,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="110" column="62" selection-start-line="110" selection-start-column="62" selection-end-line="110" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1935#1963#0" expanded="true" />
-            <element signature="e#2000#2031#0" expanded="true" />
-            <element signature="e#2067#2097#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/answerlisting.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="255">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
@@ -3195,12 +3123,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/AnswerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="270">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/ScoreActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="55" column="69" selection-start-line="53" selection-start-column="4" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

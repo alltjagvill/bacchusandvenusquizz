@@ -29,7 +29,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     int score = 0;
-    int count = 0;
+    //int count = 0;
 
 
 
