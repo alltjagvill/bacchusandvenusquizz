@@ -16,26 +16,35 @@ public class genre extends AppCompatActivity {
         }
 
     public void startSex(View sexView) {
-        Intent sex = new Intent(getApplicationContext(), ListQuizzActivity.class);
+        Intent sex = new Intent(getApplicationContext(), ListQuizActivity.class);
+        String title = getString(R.string.headline_sex);
         sex.putExtra("CATEGORY", "sex");
+        sex.putExtra("HEADLINE", title);
+
         startActivity(sex);
     }
 
     public void startMemes(View memesView) {
-        Intent memes = new Intent(getApplicationContext(), ListQuizzActivity.class);
+        Intent memes = new Intent(getApplicationContext(), ListQuizActivity.class);
+        String title = getString(R.string.headline_memes);
         memes.putExtra("CATEGORY", "memes");
+        memes.putExtra("HEADLINE", title);
         startActivity(memes);
     }
 
     public void startAlcohol(View alcoholView) {
-        Intent alcohol = new Intent(getApplicationContext(), ListQuizzActivity.class);
+        Intent alcohol = new Intent(getApplicationContext(), ListQuizActivity.class);
+        String title = getString(R.string.headline_alcohol);
         alcohol.putExtra("CATEGORY", "alcohol");
+        alcohol.putExtra("HEADLINE", title);
         startActivity(alcohol);
     }
 
     public void startMisc(View miscView) {
-        Intent misc = new Intent(getApplicationContext(), ListQuizzActivity.class);
+        Intent misc = new Intent(getApplicationContext(), ListQuizActivity.class);
+        String title = getString(R.string.headline_misc);
         misc.putExtra("CATEGORY", "misc");
+        misc.putExtra("HEADLINE", title);
         startActivity(misc);
     }
 }

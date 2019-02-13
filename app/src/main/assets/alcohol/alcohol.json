@@ -3,6 +3,7 @@
   "title" : "best quiz EVER!",
   "category" : "alcohol",
   "author" : "Niclas Binninge",
+  "date" : "2019-01-01",
   "timePerQuestion" : "10",
   "questions": [
 
@@ -11,7 +12,7 @@
       "a_r" : "Nuclear penguin",
       "a_w1" : "Nilsons stout",
       "a_w2" : "Golden gate",
-      "a_w3" : "Suprise buttsex"
+      "a_w3" : "Suprise"
     },
     {
       "question": "How strong is the strongest beer in the world?",

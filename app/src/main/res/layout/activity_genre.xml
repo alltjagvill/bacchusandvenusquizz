@@ -18,6 +18,7 @@
         android:layout_weight="1"
         android:text="@string/misc"
         android:textSize="30sp"
+        android:background="@drawable/rounded_button_corner"
         android:onClick="startMisc"/>
 
     <Button
@@ -33,6 +34,7 @@
         android:layout_weight="1"
         android:text="@string/memes"
         android:textSize="30sp"
+        android:background="@drawable/rounded_button_corner"
         android:onClick="startMemes"/>
 
     <Button
@@ -47,6 +49,7 @@
         android:layout_weight="1"
         android:text="@string/sex"
         android:textSize="30sp"
+        android:background="@drawable/rounded_button_corner"
         android:onClick="startSex"/>
 
     <Button
@@ -60,6 +63,7 @@
         android:layout_weight="1"
         android:text="@string/alcohol"
         android:textSize="30sp"
+        android:background="@drawable/rounded_button_corner"
         android:onClick="startAlcohol"/>
 
 

@@ -10,30 +10,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class QuestionActivity extends AppCompatActivity {
-    ProgressBar mProgressBar;
-    CountDownTimer mCountDownTimer;
     int timer;
-    boolean quizDone = false;
     int position = 0;
     int timePerQuestion;
     int quizLength;
 
-
+    ArrayList<String> questions = new ArrayList<>();
     ArrayList<String> rightAnswers = new ArrayList<String>();
-    //ArrayList1 rightAnswers1 = new ArrayList1(rightAnswers);
     ArrayList<String> yourAnswers = new ArrayList<String>();
-    //ArrayList1 yourAnswers1 = new ArrayList1(yourAnswers);
 
+    ProgressBar mProgressBar;
 
+    @Override
+    public void onBackPressed() {
 
+    }
 
 
     @Override
@@ -43,36 +38,33 @@ public class QuestionActivity extends AppCompatActivity {
 
         String noAnswer = getString(R.string.noAnwser);
 
-
         Quiz quiz = (Quiz) getIntent().getSerializableExtra("QUIZOBJECT");
         quizLength = quiz.questions.length;
-
-
 
         //Countdowntimer stuff
         timePerQuestion = quiz.timePerQuestion * 1000;
         mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
 
-
         TextView questionTitle = findViewById(R.id.questionTitle);
         questionTitle.setText(quiz.title);
 
-        TextView theQuesiton = findViewById(R.id.question);
+
 
         //Creating a arraylist with all the right answers and populate yourAnswers with default "No answer"
 
         for (int i = 0; i < quizLength; i++) {
+            questions.add(quiz.questions[i].question);
+            Log.d("QUESTION", questions.get(i));
+
             rightAnswers.add(quiz.questions[i].a_r);
             Log.d("ANSWERS1", rightAnswers.get(i));
 
             yourAnswers.add(noAnswer);
             Log.d("ANSWERS1", yourAnswers.get(i));
 
-          // test[i] = noAnswer;
-
-
-
         }
+
+
 
 
         //Set onclick listener on the buttons
@@ -108,24 +100,13 @@ public class QuestionActivity extends AppCompatActivity {
         startQuestion(quiz, timePerQuestion);
     }
 
-
-
-
-
-
-
-
-
-
-    //Methods
+    /* -------------------------------- Methods ------------------------------*/
 
     //Start a timer and goes to next question if question not answered
     public void startTimer(final Quiz quiz1, final int timePerQuestion) {
 
 
         new CountDownTimer(timePerQuestion, 10) {
-
-
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -134,30 +115,15 @@ public class QuestionActivity extends AppCompatActivity {
 
                 timer++;
                 mProgressBar.setProgress(timer * 100 / (timePerQuestion / 10));
-
             }
-
-
 
             @Override
             public void onFinish() {
 
-                    //mProgressBar.setProgress(0);
-
-                    mProgressBar.setRotation(0);
-                    timer = 0;
-                    position = position + 1;
-
-
-
-
-                    startQuestion(quiz1, timePerQuestion);
-
-
-
-
-                //timer = 0;
-
+                mProgressBar.setRotation(0);
+                timer = 0;
+                position = position + 1;
+                startQuestion(quiz1, timePerQuestion);
             }
         }.start();
 
@@ -169,36 +135,22 @@ public class QuestionActivity extends AppCompatActivity {
 
         Log.d("POSITON", Integer.toString(position));
         if (position >= quizLength) {
-            Log.d("Finnished", "Finnished");
 
-            /*for (int i = 0; i < rightAnswers.size(); i++ ) {
-                Log.d("ANSWERS", rightAnswers.get(i).getN);
-            }*/
-
-            for (String answers : rightAnswers) {
-                Log.d("ANSWERSR", answers);
-            }
-
-            for (String answers : yourAnswers) {
-                Log.d("ANSWERSY", answers);
-
-            }
-
-            /*String[] rAnswers = rightAnswers.toArray(new String[rightAnswers.size()]);
-            String[] yAnswers = yourAnswers.toArray(new String[yourAnswers.size()]);*/
             Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
 
-            Bundle extras = new Bundle();
+            //Bundle extras = new Bundle();
 
-            //intent.putExtra("RIGHTANSWERS", rightAnswers);
-            //extras.putStringArray("TEST", rAnswers);
+           // ArrayList[] toScore = {questions, rightAnswers, yourAnswers};
+            //ArrayList<ArrayList> toScore = new ArrayList1<question>();
+
+
+            intent.putExtra("TITLE", quiz.title);
             intent.putStringArrayListExtra("RIGHTANSWERS", rightAnswers);
             intent.putStringArrayListExtra("YOURANSWERS", yourAnswers);
+            intent.putStringArrayListExtra("QUESTIONS", questions);
 
 
-
-            //extras.putSerializable("RIGHTANSWER", rightAnswers);
-          //  extras.putSerializable("YOURANSWERS", yourAnswers);
+           // intent.putExtra("ANSWERLIST", toScore);
 
             startActivity(intent);
         }
@@ -261,18 +213,6 @@ public class QuestionActivity extends AppCompatActivity {
                 Log.d("CRASH", "Could not set text on buttons");
             }
 
-
-
-
-            /*Log.d("LENGTH", Integer.toString(quizLength));
-            Log.d("POSITION", Integer.toString(position));
-            Log.d("QUIZOBJECT", quiz.questions[position].question);
-            Log.d("QUIZOBJECT", quiz.questions[position].a_r);
-            Log.d("QUIZOBJECT", quiz.questions[position].a_w1);
-            Log.d("QUIZOBJECT", quiz.questions[position].a_w2);
-            Log.d("QUIZOBJECT", quiz.questions[position].a_w3);
-*/
-
             startTimer(quiz, timePerQuestion);
         }
     }
@@ -301,7 +241,6 @@ public class QuestionActivity extends AppCompatActivity {
 
 
             String answer = answer2.getText().toString();
-            //yourAnswers.set(position, answer);
             yourAnswers.set(position, answer);
             answer2.setBackgroundColor(Color.RED);
         }

@@ -25,9 +25,11 @@ public class QuizAdapter extends ArrayAdapter<Quiz> {
 
         TextView name = counterView.findViewById(R.id.quizName);
         TextView author = counterView.findViewById(R.id.author);
+        TextView date = counterView.findViewById(R.id.date);
 
         name.setText(quiz.title);
         author.setText(quiz.author);
+        date.setText(quiz.date);
         return counterView;
 
 

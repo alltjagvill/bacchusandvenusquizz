@@ -3,6 +3,7 @@
   "title" : "Another best quiz!",
   "category" : "alcohol",
   "author" : "Niclas",
+  "date" : "2019-01-01",
   "timePerQuestion" : "60",
   "questions": [
 

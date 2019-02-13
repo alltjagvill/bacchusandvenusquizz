@@ -2,12 +2,17 @@
     <string name="app_name">Bacchus &amp; Venus Quizz</string>
     <string name="title">Hell Bacchus och Venus!</string>
     <string name="changeMe">Change me</string>
+    <string name="changeMeNumber">0</string>
     <string name="hyphen">-</string>
+    <string name="slash">/</string>
     <string name="noAnwser">No Answer</string>
+    <string name="question">Question: </string>
+    <string name="rightAnswer">Right answer: </string>
+    <string name="yourAnswer">Your answer: </string>
 
     <!-- First screen -->
-    <string name="teamNameHint">Please enter your teams name...</string>
-    <string name="startgame">Start a quizz!</string>
+    <string name="nameHint">Name/Team name</string>
+    <string name="startgame">Start quizing!</string>
 
     <!--Genre/Categories -->
 
@@ -16,6 +21,14 @@
     <string name="sex">Sex</string>
     <string name="memes">Memes</string>
     <string name="misc">Misc</string>
+
+    <string name="headline_sex">Enjoy the world of sex!</string>
+    <string name="headline_alcohol">Enjoy the world of alcohol!</string>
+    <string name="headline_misc">Enjoy the world of Misc!</string>
+    <string name="headline_memes">Enjoy the world of memes!</string>
+
+    <!--Quiz listing -->
+
 
 
 </resources>
