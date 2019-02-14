@@ -2,6 +2,7 @@ package com.example.korp.bacchusvenusquizz;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,13 +26,19 @@ public class AnswerAdapter extends ArrayAdapter<Answer> {
             counterView = LayoutInflater.from(getContext()).inflate(R.layout.answerlisting, parent, false);
         }
 
-        TextView question = counterView.findViewById(R.id.theQuestion);
-        TextView rightAnswer = counterView.findViewById(R.id.rightAnswer);
-        TextView yourAnswer = counterView.findViewById(R.id.yourAnswer);
+        TextView questionTextView = counterView.findViewById(R.id.theQuestion);
+        TextView rightAnswerTextView = counterView.findViewById(R.id.rightAnswer);
+        TextView yourAnswerTextView = counterView.findViewById(R.id.yourAnswer);
 
-        question.setText(answer.question);
-        rightAnswer.setText(answer.rightAnswer);
-        yourAnswer.setText(answer.yourAnswer);
+        questionTextView.setText(answer.question);
+        rightAnswerTextView.setText(answer.rightAnswer);
+        yourAnswerTextView.setText(answer.yourAnswer);
+
+        if (answer.yourAnswer.equals(answer.rightAnswer))
+            yourAnswerTextView.setBackgroundColor(Color.GREEN);
+        else
+            yourAnswerTextView.setBackgroundColor(Color.RED);
+
         return counterView;
 
 

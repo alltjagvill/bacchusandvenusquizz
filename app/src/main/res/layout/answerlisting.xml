@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
@@ -14,34 +14,37 @@
 
         <TextView
             android:id="@+id/theQuestion"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:gravity="center"
             android:text="@string/changeMe"
             android:textColor="@android:color/black"
-            android:textSize="25sp" />
+            android:textSize="16sp"
+            android:background="#629df5"/>
 
 
         <TextView
             android:id="@+id/rightAnswer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginBottom="30dp"
+
+            android:layout_marginBottom="29dp"
+            android:background="#a7a7a7"
             android:text="@string/changeMe"
+            android:layout_below="@id/theQuestion"
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/yourAnswer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="300dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="9dp"
             android:text="@string/changeMe"
 
             android:textSize="15sp" />

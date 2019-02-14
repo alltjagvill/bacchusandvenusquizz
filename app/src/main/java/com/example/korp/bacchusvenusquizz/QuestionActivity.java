@@ -138,10 +138,6 @@ public class QuestionActivity extends AppCompatActivity {
 
             Intent intent = new Intent(getApplicationContext(), ScoreActivity.class);
 
-            //Bundle extras = new Bundle();
-
-           // ArrayList[] toScore = {questions, rightAnswers, yourAnswers};
-            //ArrayList<ArrayList> toScore = new ArrayList1<question>();
 
 
             intent.putExtra("TITLE", quiz.title);
