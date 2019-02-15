@@ -1,0 +1,26 @@
+{
+
+  "title" : "Det bästa quizet någonsin!",
+  "category" : "alcohol",
+  "author" : "Niclas Binninge",
+  "date" : "2019-01-01",
+  "timePerQuestion" : "10",
+  "questions": [
+
+    {
+      "question": "Vilken är den starkaste ölen i världen?",
+      "a_r" : "Nuclear penguin",
+      "a_w1" : "Nilsons stout",
+      "a_w2" : "Golden gate",
+      "a_w3" : "Suprise"
+    },
+    {
+      "question": "Hur stark är den starkaste ölen i världen?",
+      "a_r" : "50%",
+      "a_w1" : "12%",
+      "a_w2" : "27%",
+      "a_w3" : "41%"
+    }
+  ]
+
+}

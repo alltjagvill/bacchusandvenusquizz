@@ -25,6 +25,8 @@ public class QuestionActivity extends AppCompatActivity {
 
     ProgressBar mProgressBar;
 
+    CountDownTimer hej;
+
     @Override
     public void onBackPressed() {
 
@@ -105,8 +107,7 @@ public class QuestionActivity extends AppCompatActivity {
     //Start a timer and goes to next question if question not answered
     public void startTimer(final Quiz quiz1, final int timePerQuestion) {
 
-
-        new CountDownTimer(timePerQuestion, 10) {
+        hej = new CountDownTimer (timePerQuestion, 10) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -228,7 +229,7 @@ public class QuestionActivity extends AppCompatActivity {
 
             String answer = answer1.getText().toString();
             yourAnswers.set(position, answer);
-            answer1.setBackgroundColor(Color.RED);
+            answer1.setBackgroundColor(Color.GRAY);
 
 
 
@@ -238,7 +239,7 @@ public class QuestionActivity extends AppCompatActivity {
 
             String answer = answer2.getText().toString();
             yourAnswers.set(position, answer);
-            answer2.setBackgroundColor(Color.RED);
+            answer2.setBackgroundColor(Color.GRAY);
         }
 
         else if (view.getId() == R.id.answer3) {
@@ -246,7 +247,7 @@ public class QuestionActivity extends AppCompatActivity {
 
             String answer = answer3.getText().toString();
             yourAnswers.set(position, answer);
-            answer3.setBackgroundColor(Color.RED);
+            answer3.setBackgroundColor(Color.GRAY);
 
         }
 
@@ -255,10 +256,15 @@ public class QuestionActivity extends AppCompatActivity {
 
             String answer = answer4.getText().toString();
             yourAnswers.set(position, answer);
-            answer4.setBackgroundColor(Color.RED);
+            answer4.setBackgroundColor(Color.GRAY);
 
 
         }
+
+
+
+        hej.cancel();
+        hej.onFinish();
 
 
     }

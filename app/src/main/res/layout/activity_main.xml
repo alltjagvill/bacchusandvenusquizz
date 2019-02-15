@@ -35,18 +35,5 @@
         android:padding="10dp"
         android:text="@string/startgame" />
 
-    <EditText
-        android:id="@+id/teamName"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_below="@+id/venus"
-        android:layout_alignEnd="@+id/venus"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="1dp"
-        android:background="@android:color/background_light"
-        android:ems="10"
-        android:hint="@string/nameHint"
-        android:inputType="textPersonName" />
-
 
 </RelativeLayout>

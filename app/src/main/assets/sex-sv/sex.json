@@ -1,0 +1,26 @@
+{
+
+  "title" : "best quiz",
+  "category" : "alcohol",
+  "author" : "Niclas",
+  "timePerQuestion" : "10",
+  "date" : "2019-01-01",
+  "questions": [
+
+    {
+      "question": "namn?",
+      "a_r" : "peter",
+      "a_w1" : "nils",
+      "a_w2" : "susan",
+      "a_w3" : "lois"
+    },
+    {
+      "question": "namn2?",
+      "a_r" : "peter",
+      "a_w1" : "nils",
+      "a_w2" : "susan",
+      "a_w3" : "lois"
+    }
+  ]
+
+}

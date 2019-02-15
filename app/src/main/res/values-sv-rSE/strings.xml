@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bacchus &amp; Venus Quizz</string>
+    <string name="title">Hell Bacchus och Venus!</string>
+    <string name="changeMe">Byt ut mig</string>
+    <string name="changeMeNumber">0</string>
+    <string name="hyphen">-</string>
+    <string name="slash">/</string>
+    <string name="noAnwser">Inget svar</string>
+    <string name="question">Fråga: </string>
+    <string name="rightAnswer">Rätt svar: </string>
+    <string name="yourAnswer">Ditt svar: </string>
+
+    <!-- First screen -->
+    <string name="nameHint">Namn/Lagnamn</string>
+    <string name="startgame">Börja quiza!</string>
+
+    <!--Genre/Categories -->
+
+    <string name="categories">Kategorier</string>
+    <string name="alcohol">Alkohol</string>
+    <string name="sex">Sex</string>
+    <string name="memes">Memes</string>
+    <string name="misc">Blandat</string>
+    <string name="enter_name">Skriv in ditt eller ditt lags namn tack!</string>
+
+
+    <string name="headline_sex">Njut av sexets värld</string>
+    <string name="headline_alcohol">Njut av alkoholens värld</string>
+    <string name="headline_misc">Njut av diverse världar!</string>
+    <string name="headline_memes">Njut av memernas värld</string>
+
+    <!--Quiz listing -->
+    <!--Folders-->
+    <string name="sex_folder">sex-sv</string>
+    <string name="alcohol_folder">alcohol-sv</string>
+    <string name="misc_folder">misc-sv</string>
+    <string name="memes_folder">memes-sv</string>
+
+
+</resources>
