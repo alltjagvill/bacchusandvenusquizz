@@ -14,11 +14,11 @@ import android.widget.Toast;
 public class genre extends AppCompatActivity {
 
     private String folderpath;
-    /*final String MYPREFERENCES = "MYPREFERENCES";
+    final String MYPREFERENCES = "MYPREFERENCES";
     final String NAME_KEY = "namekey";
 
     EditText namefield = findViewById(R.id.teamName);
-    SharedPreferences sharedPref;*/
+    SharedPreferences sharedPref;
 
 
 
@@ -27,12 +27,12 @@ public class genre extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genre);
 
-        /*sharedPref = getSharedPreferences(MYPREFERENCES, Context.MODE_PRIVATE);
+        sharedPref = getSharedPreferences(MYPREFERENCES, Context.MODE_PRIVATE);
         String savedName = sharedPref.getString(NAME_KEY, null);
 
         if (savedName != null) {
             namefield.setText(savedName);
-        }*/
+        }
 
         }
 

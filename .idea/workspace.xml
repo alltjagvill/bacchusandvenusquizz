@@ -31,27 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="636366fc-15c7-4565-b38f-59da78cd328e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/alcohol-sv/alcohol.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/memes-sv/memes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/misc-sv/misc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/assets/sex-sv/sex.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-sv-rSE/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_question__activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_question__activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,8 +59,8 @@
       <file leaf-file-name="genre.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="218">
+              <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
               <folding>
                 <element signature="e#1322#1354#0" expanded="true" />
                 <element signature="e#1381#1411#0" expanded="true" />
@@ -116,23 +98,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity_genre.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
+            <state relative-caret-position="500">
+              <caret line="155" column="26" lean-forward="true" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -2469,7 +2442,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Category_Memes.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_category__misc.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_category__alcohol.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Category_Alcohol.java" />
@@ -2515,11 +2487,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_question__activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-sv-rSE/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml" />
       </list>
     </option>
   </component>
@@ -2651,11 +2624,11 @@
       <recent name="com.example.korp.bacchusvenusquizz" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/assets/misc-sv" />
       <recent name="$PROJECT_DIR$/app/src/main/assets/memes-sv" />
       <recent name="$PROJECT_DIR$/app/src/main/assets/sex-sv" />
       <recent name="$PROJECT_DIR$/app/src/main/assets/alcohol-sv" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2865,7 +2838,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Category_Memes.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/Category_Misc.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_category__sex.xml" />
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -3155,16 +3127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/QuestionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -3186,10 +3148,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_genre.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="155" column="26" lean-forward="true" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/korp/bacchusvenusquizz/genre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="218">
+          <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
           <folding>
             <element signature="e#1322#1354#0" expanded="true" />
             <element signature="e#1381#1411#0" expanded="true" />

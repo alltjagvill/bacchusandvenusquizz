@@ -143,4 +143,16 @@
         android:inputType="textPersonName"
         android:hint="@string/nameHint" />
 
+    <TextView
+        android:id="@+id/teamNameTextField"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_corner1"
+
+        android:text="" />
+
 </RelativeLayout>
