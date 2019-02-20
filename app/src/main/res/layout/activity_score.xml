@@ -5,14 +5,7 @@
     android:layout_height="match_parent"
     android:background="#b1f1ea">
 
-    <ImageView
-        android:id="@+id/scoreImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/maxScore"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-69dp"
-        app:srcCompat="@drawable/venus_opa" />
+
 
     <TextView
         android:id="@+id/score_title"
@@ -24,6 +17,7 @@
         android:textSize="30sp"
         android:layout_margin="3dp"
         android:textAlignment="center"
+        android:clickable="true"
         android:text="@string/changeMe" />
 
     <TextView
@@ -82,6 +76,26 @@
         android:background="@drawable/rounded_corner"
         android:backgroundTint="#87efe3"
         android:text="@string/changeMe" />
+
+    <ImageView
+        android:id="@+id/scoreImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/maxScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-69dp"
+        android:layout_below="@id/score_title"
+        android:clickable="true"
+        app:srcCompat="@drawable/venus_opa" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maxScore"
+        android:layout_alignParentStart="true"
+
+        android:text="Button" />
 
 
 </RelativeLayout>

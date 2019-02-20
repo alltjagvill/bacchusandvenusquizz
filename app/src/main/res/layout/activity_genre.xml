@@ -141,7 +141,8 @@
         android:ems="10"
         android:textAlignment="center"
         android:inputType="textPersonName"
-        android:hint="@string/nameHint" />
+        android:hint="@string/nameHint"
+        />
 
     <TextView
         android:id="@+id/teamNameTextField"
@@ -152,7 +153,6 @@
         android:textSize="20sp"
         android:textAlignment="center"
         android:background="@drawable/rounded_corner1"
-
-        android:text="" />
+        />
 
 </RelativeLayout>

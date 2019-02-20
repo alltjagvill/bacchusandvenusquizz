@@ -1,11 +1,24 @@
 package com.example.korp.bacchusvenusquizz;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class ScoreActivity extends AppCompatActivity {
@@ -17,10 +30,22 @@ public class ScoreActivity extends AppCompatActivity {
     ArrayList<Answer> answerList = new ArrayList<>();
     //****Create arraylists
 
+
+    ImageView venus;
+    TextView titleClick;
+    Button btn;
+
+    View rootView;
+    String savedName;
+    SharedPreferences sharedPref;
+    final String MYPREFERENCES = "MYPREFERENCES";
+    final String NAME_KEY = "namekey";
+
+
     //Gets back to category selection (prevents ordinary back press)
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), genre.class);
+        Intent intent = new Intent(getApplicationContext(), ActivityGenre.class);
         startActivity(intent);
         finish();
     }
@@ -45,6 +70,9 @@ public class ScoreActivity extends AppCompatActivity {
         //***Get stuff from previous activity
 
 
+
+
+
         //Sets headline of current quiz
         TextView title = findViewById(R.id.score_title);
         title.setText(headline);
@@ -54,10 +82,18 @@ public class ScoreActivity extends AppCompatActivity {
         String nrOfAnswers = Integer.toString(rightAnswers.size());
         TextView nrOfAnswersCount = findViewById(R.id.maxScore);
         nrOfAnswersCount.setText(nrOfAnswers);
+        sharedPref = getSharedPreferences(MYPREFERENCES, Context.MODE_PRIVATE);
+        savedName = sharedPref.getString(NAME_KEY, null);
+
+        TextView teamName = findViewById(R.id.scoreName);
+
+        teamName.setText(savedName);
+
 
         scoreCount = findViewById(R.id.yourScore);
 
         countScore();
+
 
 
 
@@ -92,4 +128,6 @@ public class ScoreActivity extends AppCompatActivity {
         scoreCount.setText(String.valueOf(score));
 
     }
+
+
 }
