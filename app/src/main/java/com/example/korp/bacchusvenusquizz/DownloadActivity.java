@@ -1,9 +1,12 @@
 package com.example.korp.bacchusvenusquizz;
 
 import android.Manifest;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -12,20 +15,27 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DownloadActivity extends AppCompatActivity {
 
     File f;
     String fString;
-    private static String file_url = "http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt";
+    private String file_url;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,26 +43,14 @@ public class DownloadActivity extends AppCompatActivity {
 
 
         ActivityCompat.requestPermissions(DownloadActivity.this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE},
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.INTERNET},
                 0);
 
-      /*  ActivityCompat.requestPermissions(DownloadActivity.this,
-                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                2);
-
-        ActivityCompat.requestPermissions(  DownloadActivity.this,
-                new String[]{Manifest.permission.INTERNET},
-                3);*/
-
-
-
-
-
-
-       // Intent intent = new Intent(getApplicationContext(), ActivityGenre.class);
-
-     //   startActivity(intent);
     }
+
+
+
+
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
@@ -75,7 +73,7 @@ public class DownloadActivity extends AppCompatActivity {
                     File misc = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + bovFolder, miscFolder);
                     File memes = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + bovFolder, memesFolder);
                     //String fString = f.toString();
-                   // Log.d("FOLDER", fString);
+                    // Log.d("FOLDER", fString);
                     if (!bov.exists()) {
                         bov.mkdirs();
                     }
@@ -96,7 +94,10 @@ public class DownloadActivity extends AppCompatActivity {
                         memes.mkdirs();
                     }
 
-                    new DownloadFileFromURL().execute(file_url);
+                    file_url = "http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt";
+                    new DownloadFile().execute(file_url);
+
+                    //new DownloadFileFromURL().execute(file_url);
                     /*File alcoholList = new File(Environment.getExternalStorageDirectory() + File.separator + bovFolder + File.separator + "list.txt");
                     downloadFile("http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt", alcoholList);*/
 
@@ -114,102 +115,112 @@ public class DownloadActivity extends AppCompatActivity {
     }
 
 
+    private class DownloadFile extends AsyncTask<String, String, String> {
+
+
+        private ProgressDialog progressDialog;
+        private String fileName;
+        private String folder;
+        private boolean isDownloaded;
+
+        /**
+         * Before starting background thread
+         * Show Progress Bar Dialog
+         */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            this.progressDialog = new ProgressDialog(DownloadActivity.this);
+            this.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            this.progressDialog.setCancelable(false);
+            this.progressDialog.show();
+        }
+
+        /**
+         * Downloading file in background thread
+         */
+        @Override
+        protected String doInBackground(String... f_url) {
+            int count;
+            try {
+                URL url = new URL(f_url[0]);
+                URLConnection connection = url.openConnection();
+                connection.connect();
+                // getting file length
+                int lengthOfFile = connection.getContentLength();
+
+
+                // input stream to read file - with 8k buffer
+                InputStream input = new BufferedInputStream(url.openStream(), 8192);
+
+                String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
+                //Extract file name from URL
+                fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length());
+
+                //Append timestamp to file name
+               // fileName = timestamp + "_" + fileName;
 
 
 
 
+                //Create androiddeft folder if it does not exist
+                // File directory = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "androiddeft/");
+
+                //External directory path to save file
+                folder = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "bovquiz/";
+
+                // Output stream to write file
+                OutputStream output = new FileOutputStream(folder + fileName);
+
+                byte data[] = new byte[1024];
+
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    // publishing the progress....
+                    // After this onProgressUpdate will be called
+                    publishProgress("" + (int) ((total * 100) / lengthOfFile));
 
 
+                    // writing data to file
+                    output.write(data, 0, count);
+                }
 
+                // flushing output
+                output.flush();
 
+                // closing streams
+                output.close();
+                input.close();
+                return "Downloaded at: " + folder + fileName;
 
-
-
-
-
-
-
-
-
-
-
-
-
-   /* public void onStart(){
-        super.onStart();
-        String bovFolder = "bovquiz";
-        File f = new File(Environment.getExternalStorageDirectory(), bovFolder);
-        String fString = f.toString();
-        Log.d("FOLDER", fString);
-        if (!f.exists()) {
-            f.mkdirs();
-        }*/
-       //createFolder("bovquiz");
-       /* File folder = getFilesDir();
-        String folderString = folder.toString();
-        Log.i("DUH", folderString);
-        File alcoholFolder= new File(folder, "alcohol");
-        String alcofolder = alcoholFolder.toString();
-        Log.d("ALCOHOLLIST", alcofolder);
-        alcoholFolder.mkdir();
-        File sexFolder= new File(folder, "sex");
-        sexFolder.mkdir();
-        File miscFolder = new File(folder, "misc");
-        miscFolder.mkdir();
-        File memesFolder = new File(folder, "memes");
-        memesFolder.mkdir();
-        File alcoholList = new File(getFilesDir().getPath() + "/" + "alcohollist.txt");
-        String test = alcoholList.toString();
-        Log.d("ALCOHOLLIST", test);
-        Log.d("ALCOHOLLIST", folderString);
-        downloadFile("https://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt", alcoholList);
-*/
-  //  }
-    /*public void createFolder(String fname){
-        String myfolder=Environment.getExternalStorageDirectory()+ File.separator +fname;
-        Log.d("FOLDER", myfolder);
-        File f=new File(myfolder);
-        f.mkdir();
-        if(!f.exists())
-            if(!f.mkdir()){
-                Toast.makeText(this, myfolder+" can't be created.", Toast.LENGTH_LONG).show();
-
+            } catch (Exception e) {
+                Log.e("Error: ", e.getMessage());
             }
-            else
-                Toast.makeText(this, myfolder+" can be created.", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(this, myfolder+" already exits.", Toast.LENGTH_LONG).show();
-    }
-*/
+
+            return "Something went wrong";
+        }
+
+        /**
+         * Updating progress bar
+         */
+        protected void onProgressUpdate(String... progress) {
+            // setting progress percentage
+            progressDialog.setProgress(Integer.parseInt(progress[0]));
+        }
 
 
+        @Override
+        protected void onPostExecute(String message) {
+            // dismiss the dialog after the file was downloaded
+            this.progressDialog.dismiss();
 
-
-    private static void downloadFile(String url, File outputFile) {
-        try {
-            URL u = new URL(url);
-            URLConnection conn = u.openConnection();
-            int contentLength = conn.getContentLength();
-
-            DataInputStream stream = new DataInputStream(u.openStream());
-
-            byte[] buffer = new byte[contentLength];
-            stream.readFully(buffer);
-            stream.close();
-
-            DataOutputStream fos = new DataOutputStream(new FileOutputStream(outputFile));
-            String outFile = outputFile.toString();
-            Log.d("DUH", outFile);
-            fos.write(buffer);
-            fos.flush();
-            fos.close();
-        } catch(FileNotFoundException e) {
-            return; // swallow a 404
-        } catch (IOException e) {
-            return; // swallow a 404
+            // Display File path after downloading
+            Toast.makeText(getApplicationContext(),
+                    message, Toast.LENGTH_LONG).show();
         }
     }
-
-
 
 }
