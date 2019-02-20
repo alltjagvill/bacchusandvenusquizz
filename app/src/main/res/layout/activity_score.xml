@@ -88,14 +88,7 @@
         android:clickable="true"
         app:srcCompat="@drawable/venus_opa" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/maxScore"
-        android:layout_alignParentStart="true"
 
-        android:text="Button" />
 
 
 </RelativeLayout>

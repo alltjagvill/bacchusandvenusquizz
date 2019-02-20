@@ -1,6 +1,6 @@
 {
 
-  "title" : "best quiz EVER!",
+  "title" : "Questions about beer!",
   "category" : "alcohol",
   "author" : "Niclas Binninge",
   "date" : "2019-01-01",
@@ -20,7 +20,21 @@
       "a_w1" : "12%",
       "a_w2" : "27%",
       "a_w3" : "41%"
+    },
+    {
+      "question": "Is beer good?",
+      "a_r" : "Yes",
+      "a_w1" : "No",
+      "a_w2" : "Maybe",
+      "a_w3" : "I do not know"
+    },
+    {
+      "question": "Which of the following is not a beer?",
+      "a_r": "Port",
+      "a_w1": "Draft",
+      "a_w2": "IPA",
+      "a_w3": "APA"
     }
-  ]
+      ]
 
 }
