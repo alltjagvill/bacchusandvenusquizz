@@ -34,7 +34,7 @@ public class DownloadActivity extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(DownloadActivity.this,
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE},
-                101);
+                0);
 
       /*  ActivityCompat.requestPermissions(DownloadActivity.this,
                 new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},

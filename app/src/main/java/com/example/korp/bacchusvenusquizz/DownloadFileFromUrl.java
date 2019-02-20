@@ -46,6 +46,8 @@ class DownloadFileFromURL extends AsyncTask<String, String, String> {
             OutputStream output = new FileOutputStream(Environment
                     .getExternalStorageDirectory().toString()
                     + "/alcohollist.txt");
+            String test = output.toString();
+            Log.d("TEST", test);
 
             byte data[] = new byte[1024];
 
