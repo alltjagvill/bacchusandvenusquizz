@@ -1,6 +1,6 @@
 {
 
-  "title" : "Det bästa quizet någonsin!",
+  "title" : "Frågor om öl!",
   "category" : "alcohol",
   "author" : "Niclas Binninge",
   "date" : "2019-01-01",
@@ -8,7 +8,7 @@
   "questions": [
 
     {
-      "question": "Vilken är den starkaste ölen i världen?",
+      "question": "Vad är den starkaste ölen i världen?",
       "a_r" : "Nuclear penguin",
       "a_w1" : "Nilsons stout",
       "a_w2" : "Golden gate",
@@ -20,6 +20,20 @@
       "a_w1" : "12%",
       "a_w2" : "27%",
       "a_w3" : "41%"
+    },
+    {
+      "question": "Är öl gott?",
+      "a_r" : "Ja",
+      "a_w1" : "Nej",
+      "a_w2" : "Kanske",
+      "a_w3" : "Jag vet inte"
+    },
+    {
+      "question": "Vad av följande är inte en öl?",
+      "a_r": "Port",
+      "a_w1": "Draft",
+      "a_w2": "IPA",
+      "a_w3": "APA"
     }
   ]
 
