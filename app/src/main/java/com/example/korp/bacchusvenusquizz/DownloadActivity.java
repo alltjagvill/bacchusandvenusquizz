@@ -118,55 +118,21 @@ public class DownloadActivity extends AppCompatActivity {
                         memes.mkdirs();
                     }
 
-                    //file_url = "http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt";
-                    //fileDir = "bovquiz/";
-                    /*categoryDownload(alcoholFolder, "alcohollist.txt", website);
-                    categoryDownload(sexFolder, "sexlist.txt", website);
-*/
-                    AsyncTask.execute(new Runnable() {
-                        @Override
-                        public void run() {
-
-                             //to read each line
-                            //TextView t; //to show the result, please declare and find it inside onCreate()
 
 
-                            try {
-                                // Create a URL for the desired page
-                                URL url = new URL("http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt"); //My text file location
-                                //First open the connection
-                                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                                conn.setConnectTimeout(60000); // timing out in a minute
+                 //   String alcoList = "http://projekt.binninge.se/bovquiz/alcohol/niclasbinninge/2019-02-21-13-21_alcohol.json";
+                    readList(alcoholFolder, "http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt");
+                    readList(sexFolder, "http://projekt.binninge.se/bovquiz/sex/sexlist.txt");
+                    readList(memesFolder, "http://projekt.binninge.se/bovquiz/memes/memeslist.txt");
+                    readList(miscFolder, "http://projekt.binninge.se/bovquiz/misc/misclist.txt");
+                //    new DownloadFile().execute(alcoList, alcoholFolder);
 
-                                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-
-                                 // ideally do this in onCreate()
-                                String str;
-                                while ((str = in.readLine()) != null) {
-                                    urls.add(str);
-                                }
-                                in.close();
-                            } catch (Exception e) {
-                                Log.d("MyTag", e.toString());
-                            }
-
-                            //since we are in background thread, to post results we have to go back to ui thread. do the following for that
-
-                            DownloadActivity.this.runOnUiThread(new Runnable() {
-                                public void run() {
-                                    t.setText(urls.get(0)); // My TextFile has 3 lines
-                                }
-                            });
-                        }
-                    });
 
                    /* Intent intent = new Intent(getApplicationContext(), Download2Activity.class);
                     startActivity(intent);*/
-                   // new DownloadFile().execute(file_url, fileDir);
+                 ;
 
-                    //new DownloadFileFromURL().execute(file_url);
-                    /*File alcoholList = new File(Environment.getExternalStorageDirectory() + File.separator + bovFolder + File.separator + "list.txt");
-                    downloadFile("http://projekt.binninge.se/bovquiz/alcohol/alcohollist.txt", alcoholList);*/
+
 
                 } else {
 
@@ -181,61 +147,53 @@ public class DownloadActivity extends AppCompatActivity {
         }
     }
 
-    public void categoryDownload(String fileDir, String list, String website) {
+    public void readList(final String category, final String url) {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
 
-        String targetList = website + bovFolder + fileDir + list;
-        try {
-            // Create a URL for the desired page
-            URL url = new URL(targetList);
-
-            // Read all the text returned by the server
-            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-            String str = in.readLine();
-            Log.d("DUH", str);
-            in.close();
+                //to read each line
+                //TextView t; //to show the result, please declare and find it inside onCreate()
 
 
-        }
-        catch (MalformedURLException e) {
-        }
-        catch (IOException e) {
-        }
+                try {
+                    // Create a URL for the desired page
+                    URL ur = new URL(url); //My text file location
+                    //First open the connection
+                    HttpURLConnection conn = (HttpURLConnection) ur.openConnection();
+                    conn.setConnectTimeout(60000); // timing out in a minute
 
-        //Log.d("DUH", targetList);
+                    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
-        /*String targetListLocal = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator +  bovFolder + list;
-        new DownloadFile().execute(targetList, targetListLocal);*/
-        //Log.d("DUH", targetListLocal);
+                    // ideally do this in onCreate()
+                    String str;
+                    while ((str = in.readLine()) != null) {
+                        urls.add(str);
+                    }
+                    in.close();
+                } catch (Exception e) {
+                    Log.d("MyTag", e.toString());
+                }
 
 
 
-        /*BufferedReader reader;
 
-        try{
-            final InputStream file = getAssets().open(targetListLocal);
-            reader = new BufferedReader(new InputStreamReader(file));
-            String line = reader.readLine();
-            while(line != null){
-                String jsonDownload = website + bovFolder + line;
-                Log.d("DUH", jsonDownload);
-                Log.d("LINEDUH", line);
-                line = reader.readLine();
+                //since we are in background thread, to post results we have to go back to ui thread. do the following for that
+
+                DownloadActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        for (int i = 0; i < urls.size(); i++) {
+                          //  Log.d("David", urls.get(i));
+                            new DownloadFile().execute(urls.get(i), category);
+                            t.setText(urls.get(i));
+
+                        }
+                    }
+                });
             }
-        } catch(IOException ioe){
-            ioe.printStackTrace();
-            String ioeString = ioe.toString();
-            Log.d("IOE", ioeString);
-        }*/
-
+        });
 
     }
-
-
-
-
-
-
-
 
     private class DownloadFile extends AsyncTask<String, String, String> {
 
@@ -267,7 +225,11 @@ public class DownloadActivity extends AppCompatActivity {
             int count;
 
             try {
-                String targetDir = f_url[1];
+                String targetDir = bovFolder + f_url[1];
+
+                Log.d("David", targetDir);
+                Log.d("David", f_url[0]);
+
 
                 URL url = new URL(f_url[0]);
                 URLConnection connection = url.openConnection();
@@ -279,7 +241,7 @@ public class DownloadActivity extends AppCompatActivity {
                 // input stream to read file - with 8k buffer
                 InputStream input = new BufferedInputStream(url.openStream(), 8192);
 
-                String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+              //  String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 
                 //Extract file name from URL
                 fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length());
@@ -289,14 +251,15 @@ public class DownloadActivity extends AppCompatActivity {
 
 
 
-                //Create androiddeft folder if it does not exist
-                // File directory = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "androiddeft/");
+
 
                 //External directory path to save file
                 folder = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + targetDir;
+                Log.d("David", folder);
 
+                Log.d("DUH", folder);
                 // Output stream to write file
-                OutputStream output = new FileOutputStream(targetDir);
+                OutputStream output = new FileOutputStream(folder + fileName);
 
                 byte data[] = new byte[1024];
 
